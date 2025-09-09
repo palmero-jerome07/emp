@@ -43,7 +43,7 @@
             // 
             // pnlSideMenu
             // 
-            pnlSideMenu.BackColor = Color.FromArgb(58, 84, 110);
+            pnlSideMenu.BackColor = Color.FromArgb(43, 77, 95);
             pnlSideMenu.Controls.Add(btnAddEmp);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Controls.Add(panel1);
@@ -91,7 +91,7 @@
             // 
             // pnlTitleBar
             // 
-            pnlTitleBar.BackColor = Color.FromArgb(44, 62, 80);
+            pnlTitleBar.BackColor = Color.FromArgb(39, 58, 74);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
