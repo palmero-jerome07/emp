@@ -55,7 +55,7 @@
             // 
             // btnAddEmp
             // 
-            btnAddEmp.BackColor = Color.FromArgb(63, 147, 133);
+            btnAddEmp.BackColor = Color.FromArgb(60, 173, 150);
             btnAddEmp.Cursor = Cursors.Hand;
             btnAddEmp.Dock = DockStyle.Top;
             btnAddEmp.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -69,7 +69,7 @@
             // 
             // btnMasterData
             // 
-            btnMasterData.BackColor = Color.FromArgb(63, 147, 133);
+            btnMasterData.BackColor = Color.FromArgb(60, 173, 150);
             btnMasterData.Cursor = Cursors.Hand;
             btnMasterData.Dock = DockStyle.Top;
             btnMasterData.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
