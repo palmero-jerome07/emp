@@ -43,7 +43,7 @@
             // 
             // pnlSideMenu
             // 
-            pnlSideMenu.BackColor = SystemColors.ActiveCaption;
+            pnlSideMenu.BackColor = Color.FromArgb(58, 84, 110);
             pnlSideMenu.Controls.Add(btnAddEmp);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Controls.Add(panel1);
@@ -55,26 +55,30 @@
             // 
             // btnAddEmp
             // 
-            btnAddEmp.BackColor = Color.Linen;
+            btnAddEmp.BackColor = Color.FromArgb(63, 147, 133);
+            btnAddEmp.Cursor = Cursors.Hand;
             btnAddEmp.Dock = DockStyle.Top;
-            btnAddEmp.Font = new Font("Century", 11.25F);
+            btnAddEmp.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddEmp.ForeColor = Color.White;
             btnAddEmp.Location = new Point(0, 46);
             btnAddEmp.Name = "btnAddEmp";
             btnAddEmp.Size = new Size(220, 46);
             btnAddEmp.TabIndex = 3;
-            btnAddEmp.Text = "ADD EMPLOYEE";
+            btnAddEmp.Text = "➕ ADD EMPLOYEE";
             btnAddEmp.UseVisualStyleBackColor = false;
             // 
             // btnMasterData
             // 
-            btnMasterData.BackColor = Color.Linen;
+            btnMasterData.BackColor = Color.FromArgb(63, 147, 133);
+            btnMasterData.Cursor = Cursors.Hand;
             btnMasterData.Dock = DockStyle.Top;
-            btnMasterData.Font = new Font("Century", 11.25F);
+            btnMasterData.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnMasterData.ForeColor = Color.White;
             btnMasterData.Location = new Point(0, 0);
             btnMasterData.Name = "btnMasterData";
             btnMasterData.Size = new Size(220, 46);
             btnMasterData.TabIndex = 2;
-            btnMasterData.Text = "MASTER DATA";
+            btnMasterData.Text = "📊 MASTER DATA";
             btnMasterData.UseVisualStyleBackColor = false;
             btnMasterData.Click += btnMasterData_Click;
             // 
@@ -87,7 +91,7 @@
             // 
             // pnlTitleBar
             // 
-            pnlTitleBar.BackColor = SystemColors.ActiveCaption;
+            pnlTitleBar.BackColor = Color.FromArgb(44, 62, 80);
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
@@ -101,7 +105,8 @@
             // btnClose
             // 
             btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClose.BackColor = Color.Linen;
+            btnClose.BackColor = Color.FromArgb(236, 240, 241);
+            btnClose.Cursor = Cursors.Hand;
             btnClose.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnClose.Location = new Point(702, 12);
             btnClose.Name = "btnClose";
@@ -114,7 +119,8 @@
             // btnMaximize
             // 
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximize.BackColor = Color.Linen;
+            btnMaximize.BackColor = Color.FromArgb(236, 240, 241);
+            btnMaximize.Cursor = Cursors.Hand;
             btnMaximize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMaximize.Location = new Point(662, 12);
             btnMaximize.Name = "btnMaximize";
@@ -127,7 +133,8 @@
             // btnMinimize
             // 
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimize.BackColor = Color.Linen;
+            btnMinimize.BackColor = Color.FromArgb(236, 240, 241);
+            btnMinimize.Cursor = Cursors.Hand;
             btnMinimize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnMinimize.Location = new Point(622, 12);
             btnMinimize.Name = "btnMinimize";
@@ -139,7 +146,7 @@
             // 
             // pnlStage
             // 
-            pnlStage.BackColor = Color.Linen;
+            pnlStage.BackColor = Color.FromArgb(236, 240, 241);
             pnlStage.Dock = DockStyle.Fill;
             pnlStage.Location = new Point(220, 51);
             pnlStage.Name = "pnlStage";
