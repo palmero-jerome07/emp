@@ -8,7 +8,7 @@ It uses **MS Access as the database** and provides a simple interface for CRUD o
 
 ## ⚙️ Functionality 
 - Add new employee records  
-- View employee list  
+- View employee lists  
 - Update employee details  
 - Delete employee records  
 - Connects to **MS Access Database** for data storage  
