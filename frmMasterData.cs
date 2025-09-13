@@ -23,6 +23,8 @@ namespace EmployeeManagementSystem
 
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             pnlChildTitle = new Panel();
             lblMasterData = new Label();
@@ -56,9 +58,25 @@ namespace EmployeeManagementSystem
             // 
             // dtgMasterData
             // 
+            dataGridViewCellStyle1.BackColor = Color.DarkGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.NullValue = "-";
+            dataGridViewCellStyle1.SelectionBackColor = Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dtgMasterData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgMasterData.BackgroundColor = Color.Linen;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgMasterData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgMasterData.Dock = DockStyle.Fill;
+            dtgMasterData.GridColor = SystemColors.InactiveCaptionText;
             dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
             dtgMasterData.Size = new Size(748, 345);

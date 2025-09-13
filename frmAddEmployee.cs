@@ -36,7 +36,7 @@ namespace EmployeeManagementSystem
         {
             bool dtg_addrequestor = false;
             string EMS_data = string.Empty;
-            EMS_data = "SELECT * FROM [tblEmployee] WHERE [EmployeeID] = '" + txtEmpID.Text + "'";
+            EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
             if (dtg_addrequestor == true)
             {
@@ -48,13 +48,7 @@ namespace EmployeeManagementSystem
             }
             else
             {
-                string add_requestor = "INSERT INTO [tblEmployeeData] (" +
-                    "[EmployeeNumber], " +
-                    "[RequestorName], " +
-                    "[RequestorEmail], " +
-                    "[Section], " +
-                    "[LocalNumber]) VALUES " +
-                    "('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" + txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtLocalNumber.Text + "')";
+                string add_requestor = "INSERT INTO [tblEmployeeData] ([EmployeeNumber],[RequestorName], [RequestorEmail], [Section],[LocalNumber]) VALUES ('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" +  txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtLocalNumber.Text + "')";
 
                 CRUD.CRUD.CUD(add_requestor);
                 MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
