@@ -32,18 +32,18 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
+            comboBox1 = new ComboBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -99,86 +99,16 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
             // 
-            // label3
+            // button2
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(18, 40);
-            label3.Name = "label3";
-            label3.Size = new Size(112, 15);
-            label3.TabIndex = 0;
-            label3.Text = "Employee Number :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(29, 70);
-            label4.Name = "label4";
-            label4.Size = new Size(101, 15);
-            label4.TabIndex = 1;
-            label4.Text = "Requestor Name :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(43, 99);
-            label5.Name = "label5";
-            label5.Size = new Size(87, 15);
-            label5.TabIndex = 2;
-            label5.Text = "Email Address :";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(42, 129);
-            label6.Name = "label6";
-            label6.Size = new Size(88, 15);
-            label6.TabIndex = 3;
-            label6.Text = "Local Number :";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(78, 160);
-            label7.Name = "label7";
-            label7.Size = new Size(52, 15);
-            label7.TabIndex = 4;
-            label7.Text = "Section :";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(136, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(276, 23);
-            textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(136, 67);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(452, 23);
-            textBox2.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(136, 96);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(452, 23);
-            textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(136, 125);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(276, 23);
-            textBox4.TabIndex = 8;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(136, 156);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(276, 23);
-            comboBox1.TabIndex = 9;
+            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(418, 37);
+            button2.Name = "button2";
+            button2.Size = new Size(102, 23);
+            button2.TabIndex = 11;
+            button2.Text = "Search";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -190,16 +120,86 @@
             button1.Text = "INSERT/UPDATE";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(418, 37);
-            button2.Name = "button2";
-            button2.Size = new Size(102, 23);
-            button2.TabIndex = 11;
-            button2.Text = "Search";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(136, 156);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(276, 23);
+            comboBox1.TabIndex = 9;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(136, 125);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(276, 23);
+            textBox4.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(136, 96);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(452, 23);
+            textBox3.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(136, 67);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(452, 23);
+            textBox2.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(136, 37);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(276, 23);
+            textBox1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(78, 160);
+            label7.Name = "label7";
+            label7.Size = new Size(52, 15);
+            label7.TabIndex = 4;
+            label7.Text = "Section :";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(42, 129);
+            label6.Name = "label6";
+            label6.Size = new Size(88, 15);
+            label6.TabIndex = 3;
+            label6.Text = "Local Number :";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(43, 99);
+            label5.Name = "label5";
+            label5.Size = new Size(87, 15);
+            label5.TabIndex = 2;
+            label5.Text = "Email Address :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(29, 70);
+            label4.Name = "label4";
+            label4.Size = new Size(101, 15);
+            label4.TabIndex = 1;
+            label4.Text = "Requestor Name :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(18, 40);
+            label3.Name = "label3";
+            label3.Size = new Size(112, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Employee Number :";
             // 
             // frmAddEmployee
             // 
