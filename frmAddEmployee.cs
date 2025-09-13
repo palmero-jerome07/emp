@@ -55,6 +55,9 @@ namespace EmployeeManagementSystem
                     "[Section], " +
                     "[LocalNumber]) VALUES " +
                     "('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" + txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtLocalNumber.Text + "')";
+
+                CRUD.CRUD.CUD(add_requestor);
+                MessageBox.Show("Added Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
