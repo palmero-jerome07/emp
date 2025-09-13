@@ -63,7 +63,7 @@ namespace EmployeeManagementSystem.CRUD
                 withBlock.DataSource = dt;
             }
 
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 con.Close();
                 return true;
@@ -73,6 +73,26 @@ namespace EmployeeManagementSystem.CRUD
                 con.Close();
                 return false;
 
+            }
+        }
+        public static bool CUD(string sql)
+        {
+            con.Open();
+            {
+                var withBlock = cmd;
+                withBlock.Connection = con;
+                withBlock.CommandText = sql;
+                resultSQL = withBlock.ExecuteNonQuery();
+            }
+            if (resultSQL > 0)
+            {
+                con.Close();
+                return true;
+            }
+            else
+            {
+                con.Close();
+                return false;
             }
         }
     }

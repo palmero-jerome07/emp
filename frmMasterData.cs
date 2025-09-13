@@ -23,30 +23,24 @@ namespace EmployeeManagementSystem
 
         private void InitializeComponent()
         {
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(frmMasterData));
             pnlChildTitle = new Panel();
-            dtgMasterData = new DataGridView();
             lblMasterData = new Label();
+            dtgMasterData = new DataGridView();
             pnlChildTitle.SuspendLayout();
             ((ISupportInitialize)dtgMasterData).BeginInit();
             SuspendLayout();
             // 
             // pnlChildTitle
             // 
-            pnlChildTitle.BackColor = SystemColors.ActiveCaption;
+            pnlChildTitle.BackColor = Color.FromArgb(39, 58, 74);
             pnlChildTitle.Controls.Add(lblMasterData);
             pnlChildTitle.Dock = DockStyle.Top;
+            pnlChildTitle.ForeColor = SystemColors.ControlLight;
             pnlChildTitle.Location = new Point(0, 0);
             pnlChildTitle.Name = "pnlChildTitle";
             pnlChildTitle.Size = new Size(748, 45);
             pnlChildTitle.TabIndex = 0;
-            // 
-            // dtgMasterData
-            // 
-            dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgMasterData.Location = new Point(0, 51);
-            dtgMasterData.Name = "dtgMasterData";
-            dtgMasterData.Size = new Size(748, 323);
-            dtgMasterData.TabIndex = 1;
             // 
             // lblMasterData
             // 
@@ -59,13 +53,24 @@ namespace EmployeeManagementSystem
             lblMasterData.Text = "Master Data";
             lblMasterData.Click += lblMasterData_Click;
             // 
+            // dtgMasterData
+            // 
+            dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgMasterData.Location = new Point(0, 51);
+            dtgMasterData.Name = "dtgMasterData";
+            dtgMasterData.Size = new Size(748, 323);
+            dtgMasterData.TabIndex = 1;
+            // 
             // frmMasterData
             // 
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(748, 373);
             Controls.Add(dtgMasterData);
             Controls.Add(pnlChildTitle);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMasterData";
+            Text = "Master Data";
+            Load += frmMasterData_Load;
             pnlChildTitle.ResumeLayout(false);
             pnlChildTitle.PerformLayout();
             ((ISupportInitialize)dtgMasterData).EndInit();
@@ -75,6 +80,12 @@ namespace EmployeeManagementSystem
         private void lblMasterData_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMasterData_Load(object sender, EventArgs e)
+        {
+            string select_tblrequestorlist = "SELECT * FROM tblEmployeeData ORDER BY EmployeeNumber DESC";
+            CRUD.CRUD.RETRIEVEDTG(dtgMasterData, select_tblrequestorlist);
         }
     }
 }

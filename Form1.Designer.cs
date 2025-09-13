@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMotherForm));
             pnlSideMenu = new Panel();
             btnAddEmp = new Button();
             btnMasterData = new Button();
@@ -162,8 +163,9 @@
             Controls.Add(pnlStage);
             Controls.Add(pnlSideMenu);
             Controls.Add(pnlTitleBar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmMotherForm";
-            Text = "Form1";
+            Text = "Employee Management System";
             Load += frmMotherForm_Load;
             pnlSideMenu.ResumeLayout(false);
             pnlTitleBar.ResumeLayout(false);
