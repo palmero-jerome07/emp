@@ -34,12 +34,12 @@
             label2 = new Label();
             groupBox1 = new GroupBox();
             button2 = new Button();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            btnInsertUpdate = new Button();
+            cmbSection = new ComboBox();
+            txtLocalNumber = new TextBox();
+            txtEmailAddress = new TextBox();
+            txtRequestorName = new TextBox();
+            txtEmpID = new TextBox();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -51,25 +51,25 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(39, 58, 74);
+            panel1.BackColor = Color.FromArgb(43, 77, 95);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = Color.FromArgb(236, 240, 241);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(748, 45);
+            panel1.Size = new Size(748, 28);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(16, 14);
+            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(8, 4);
             label1.Name = "label1";
-            label1.Size = new Size(93, 17);
+            label1.Size = new Size(134, 20);
             label1.TabIndex = 0;
-            label1.Text = "Add employee";
+            label1.Text = "➕ Add Employee";
             // 
             // label2
             // 
@@ -83,12 +83,12 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(textBox4);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(btnInsertUpdate);
+            groupBox1.Controls.Add(cmbSection);
+            groupBox1.Controls.Add(txtLocalNumber);
+            groupBox1.Controls.Add(txtEmailAddress);
+            groupBox1.Controls.Add(txtRequestorName);
+            groupBox1.Controls.Add(txtEmpID);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
@@ -97,67 +97,74 @@
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(12, 53);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(724, 226);
+            groupBox1.Size = new Size(610, 226);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Employee Details Manual Insert and Update";
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(60, 173, 150);
+            button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
             button2.Location = new Point(418, 37);
             button2.Name = "button2";
             button2.Size = new Size(102, 23);
             button2.TabIndex = 11;
             button2.Text = "Search";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
-            // button1
+            // btnInsertUpdate
             // 
-            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(136, 185);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 35);
-            button1.TabIndex = 10;
-            button1.Text = "INSERT/UPDATE";
-            button1.UseVisualStyleBackColor = true;
+            btnInsertUpdate.BackColor = Color.FromArgb(60, 173, 150);
+            btnInsertUpdate.FlatStyle = FlatStyle.Popup;
+            btnInsertUpdate.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInsertUpdate.ForeColor = Color.White;
+            btnInsertUpdate.Location = new Point(136, 185);
+            btnInsertUpdate.Name = "btnInsertUpdate";
+            btnInsertUpdate.Size = new Size(109, 28);
+            btnInsertUpdate.TabIndex = 10;
+            btnInsertUpdate.Text = "INSERT/UPDATE";
+            btnInsertUpdate.UseVisualStyleBackColor = false;
+            btnInsertUpdate.Click += btnInsertUpdate_Click;
             // 
-            // comboBox1
+            // cmbSection
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(136, 156);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(276, 23);
-            comboBox1.TabIndex = 9;
+            cmbSection.FormattingEnabled = true;
+            cmbSection.Location = new Point(136, 156);
+            cmbSection.Name = "cmbSection";
+            cmbSection.Size = new Size(276, 23);
+            cmbSection.TabIndex = 9;
             // 
-            // textBox4
+            // txtLocalNumber
             // 
-            textBox4.Location = new Point(136, 125);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(276, 23);
-            textBox4.TabIndex = 8;
+            txtLocalNumber.Location = new Point(136, 125);
+            txtLocalNumber.Name = "txtLocalNumber";
+            txtLocalNumber.Size = new Size(276, 23);
+            txtLocalNumber.TabIndex = 8;
             // 
-            // textBox3
+            // txtEmailAddress
             // 
-            textBox3.Location = new Point(136, 96);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(452, 23);
-            textBox3.TabIndex = 7;
+            txtEmailAddress.Location = new Point(136, 96);
+            txtEmailAddress.Name = "txtEmailAddress";
+            txtEmailAddress.Size = new Size(452, 23);
+            txtEmailAddress.TabIndex = 7;
             // 
-            // textBox2
+            // txtRequestorName
             // 
-            textBox2.Location = new Point(136, 67);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(452, 23);
-            textBox2.TabIndex = 6;
+            txtRequestorName.Location = new Point(136, 67);
+            txtRequestorName.Name = "txtRequestorName";
+            txtRequestorName.Size = new Size(452, 23);
+            txtRequestorName.TabIndex = 6;
             // 
-            // textBox1
+            // txtEmpID
             // 
-            textBox1.Location = new Point(136, 37);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(276, 23);
-            textBox1.TabIndex = 5;
+            txtEmpID.Location = new Point(136, 37);
+            txtEmpID.Name = "txtEmpID";
+            txtEmpID.Size = new Size(276, 23);
+            txtEmpID.TabIndex = 5;
             // 
             // label7
             // 
@@ -237,11 +244,11 @@
         private Label label4;
         private Label label3;
         private Button button2;
-        private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button btnInsertUpdate;
+        private ComboBox cmbSection;
+        private TextBox txtLocalNumber;
+        private TextBox txtEmailAddress;
+        private TextBox txtRequestorName;
+        private TextBox txtEmpID;
     }
 }

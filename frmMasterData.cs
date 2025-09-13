@@ -40,7 +40,7 @@ namespace EmployeeManagementSystem
             pnlChildTitle.ForeColor = Color.FromArgb(236, 240, 241);
             pnlChildTitle.Location = new Point(0, 0);
             pnlChildTitle.Name = "pnlChildTitle";
-            pnlChildTitle.Size = new Size(748, 33);
+            pnlChildTitle.Size = new Size(748, 28);
             pnlChildTitle.TabIndex = 0;
             // 
             // lblMasterData
@@ -49,16 +49,17 @@ namespace EmployeeManagementSystem
             lblMasterData.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMasterData.Location = new Point(12, 4);
             lblMasterData.Name = "lblMasterData";
-            lblMasterData.Size = new Size(92, 20);
+            lblMasterData.Size = new Size(117, 20);
             lblMasterData.TabIndex = 0;
-            lblMasterData.Text = "Master Data";
+            lblMasterData.Text = "📊 Master Data";
             lblMasterData.Click += lblMasterData_Click;
             // 
             // dtgMasterData
             // 
             dtgMasterData.BackgroundColor = Color.Linen;
             dtgMasterData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgMasterData.Location = new Point(0, 29);
+            dtgMasterData.Dock = DockStyle.Fill;
+            dtgMasterData.Location = new Point(0, 28);
             dtgMasterData.Name = "dtgMasterData";
             dtgMasterData.Size = new Size(748, 345);
             dtgMasterData.TabIndex = 1;
