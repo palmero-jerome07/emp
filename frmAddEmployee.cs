@@ -38,6 +38,12 @@ namespace EmployeeManagementSystem
             string EMS_data = string.Empty;
             EMS_data = "SELECT * FROM [tblEmployeeData] WHERE [EmployeeNumber] = '" + txtEmpID.Text + "'";
             dtg_addrequestor = CRUD.CRUD.RETRIEVESINGLE(EMS_data);
+
+           if (txtEmpID.Text == "" || txtRequestorName.Text == "" || txtEmailAddress.Text == "" || cmbSection.Text == "" || txtLocalNumber.Text == "")
+            {
+                MessageBox.Show("Please fill up all the fields.", "Not found.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                return;
+            }
             if (dtg_addrequestor == true)
             {
                 MessageBox.Show("This account '" + txtRequestorName.Text + "' is already exist.", "Not found.",
@@ -47,7 +53,7 @@ namespace EmployeeManagementSystem
                 txtLocalNumber.Text = "";
             }
             else
-            {
+            { 
                 string add_requestor = "INSERT INTO [tblEmployeeData] ([EmployeeNumber],[RequestorName], [RequestorEmail], [Section],[LocalNumber]) VALUES ('" + txtEmpID.Text + "','" + txtRequestorName.Text + "','" +  txtEmailAddress.Text + "','" + cmbSection.Text + "','" + txtLocalNumber.Text + "')";
 
                 CRUD.CRUD.CUD(add_requestor);
