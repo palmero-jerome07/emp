@@ -18,7 +18,7 @@ namespace EmployeeManagementSystem.CRUD
         public static int resultSQL;
         public static Image getIMG = null;
 
-        public static bool RETRIEVESINGLE(String SQL)
+        public static bool RETRIEVESINGLE(string SQL)
         {
             con.Open();
             cmd = new OleDbCommand();

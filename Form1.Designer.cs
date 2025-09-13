@@ -45,6 +45,7 @@
             // pnlSideMenu
             // 
             pnlSideMenu.BackColor = Color.FromArgb(43, 77, 95);
+            pnlSideMenu.BorderStyle = BorderStyle.FixedSingle;
             pnlSideMenu.Controls.Add(btnAddEmp);
             pnlSideMenu.Controls.Add(btnMasterData);
             pnlSideMenu.Controls.Add(panel1);
@@ -63,10 +64,11 @@
             btnAddEmp.ForeColor = Color.White;
             btnAddEmp.Location = new Point(0, 46);
             btnAddEmp.Name = "btnAddEmp";
-            btnAddEmp.Size = new Size(220, 46);
+            btnAddEmp.Size = new Size(218, 46);
             btnAddEmp.TabIndex = 3;
             btnAddEmp.Text = "➕ ADD EMPLOYEE";
             btnAddEmp.UseVisualStyleBackColor = false;
+            btnAddEmp.Click += btnAddEmp_Click;
             // 
             // btnMasterData
             // 
@@ -77,7 +79,7 @@
             btnMasterData.ForeColor = Color.White;
             btnMasterData.Location = new Point(0, 0);
             btnMasterData.Name = "btnMasterData";
-            btnMasterData.Size = new Size(220, 46);
+            btnMasterData.Size = new Size(218, 46);
             btnMasterData.TabIndex = 2;
             btnMasterData.Text = "📊 MASTER DATA";
             btnMasterData.UseVisualStyleBackColor = false;
@@ -93,6 +95,7 @@
             // pnlTitleBar
             // 
             pnlTitleBar.BackColor = Color.FromArgb(39, 58, 74);
+            pnlTitleBar.BorderStyle = BorderStyle.FixedSingle;
             pnlTitleBar.Controls.Add(btnClose);
             pnlTitleBar.Controls.Add(btnMaximize);
             pnlTitleBar.Controls.Add(btnMinimize);
@@ -109,7 +112,7 @@
             btnClose.BackColor = Color.FromArgb(236, 240, 241);
             btnClose.Cursor = Cursors.Hand;
             btnClose.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClose.Location = new Point(702, 12);
+            btnClose.Location = new Point(700, 12);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(34, 27);
             btnClose.TabIndex = 2;
@@ -123,7 +126,7 @@
             btnMaximize.BackColor = Color.FromArgb(236, 240, 241);
             btnMaximize.Cursor = Cursors.Hand;
             btnMaximize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMaximize.Location = new Point(662, 12);
+            btnMaximize.Location = new Point(660, 12);
             btnMaximize.Name = "btnMaximize";
             btnMaximize.Size = new Size(34, 27);
             btnMaximize.TabIndex = 1;
@@ -137,7 +140,7 @@
             btnMinimize.BackColor = Color.FromArgb(236, 240, 241);
             btnMinimize.Cursor = Cursors.Hand;
             btnMinimize.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnMinimize.Location = new Point(622, 12);
+            btnMinimize.Location = new Point(620, 12);
             btnMinimize.Name = "btnMinimize";
             btnMinimize.Size = new Size(34, 27);
             btnMinimize.TabIndex = 0;

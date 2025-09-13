@@ -75,5 +75,10 @@ namespace EmployeeManagementSystem
         {
             OpenChildForm(new frmMasterData());
         }
+
+        private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmAddEmployee());
+        }
     }
 }

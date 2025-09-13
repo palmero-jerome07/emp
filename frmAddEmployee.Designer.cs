@@ -51,13 +51,15 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ActiveCaption;
+            panel1.BackColor = Color.FromArgb(39, 58, 74);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
+            panel1.ForeColor = Color.FromArgb(236, 240, 241);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(748, 45);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
